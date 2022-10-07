@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+
+<html
+  lang="en"
+  class="light-style layout-menu-fixed"
+  dir="ltr"
+  data-theme="theme-default"
+  data-assets-path="../static/"
+  data-template="vertical-menu-template-free"
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
+
+    <title>เว็บแอปพลิเคชันสำหรับคัดกรองปอดอักเสบ</title>
+
+    <meta name="description" content="" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../static/img/logo/Logo.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    
+    <!-- Icons. Uncomment required icon fonts -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Bootstrap CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../static/vendor/css/style.css" />
+
+    <!-- Helpers -->
+    <script src="../static/vendor/js/helpers.js"></script>
+  </head>
+
+  <body>
+    <!-- Layout wrapper -->
+    <div class="layout-wrapper layout-content-navbar">
+      <div class="layout-container">
+        <!-- Menu -->
+
+        <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+          <div class="app-brand">
+            <a href="/" class="app-brand-link">
+              <img src="../static/img/logo/Logo.png" style="height: 2.5rem; width: 2.5rem; margin: auto; margin-left: -0.5rem;"/>
+              <h3 class="menu-text fw-bolder ms-2 mt-4">PS</h3>
+            </a>
+          </div>
+
+          <ul class="menu-inner py-1">
+            <!-- Homepage -->
+            <li class="menu-item active">
+              <a href="/" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-home-circle"></i>
+                <div data-i18n="Analytics">หน้าหลัก</div>
+              </a>
+            </li>
+ 
+            <!-- ปอด -->
+            <li class="menu-header small text-uppercase"><span class="menu-header-text">ปอด</span></li>
+              <li class="menu-item">
+                <a href="javascript:void(0);" class="menu-link menu-toggle">
+                    <i class="menu-icon tf-icons bx bx-layout"></i>
+                    <div data-i18n="Layouts">ประเภทของปอด</div>
+                  </a>
+
+                  <ul class="menu-sub">
+                    <li class="menu-item">
+                      <a href="/normal" class="menu-link">
+                        <div data-i18n="Without menu">ปอดปกติ</div>
+                      </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="/pneumonia" class="menu-link">
+                        <div data-i18n="Without navbar">ปอดอักเสบ</div>
+                      </a>
+                    </li>
+                  </ul>
+                </a>
+
+            <!-- คู่มือการใช้งาน -->
+            <li class="menu-header small text-uppercase"><span class="menu-header-text">การใช้งานเว็บ</span></li>
+              <li class="menu-item">
+                <a href="/guide" class="menu-link">
+                  <i class="menu-icon tf-icons bx bx-detail"></i>
+                  <div>คู่มือการใช้งาน</div>
+                </a>
+              </li>
+            </li>
+          </ul>
+        </aside>
+        <!-- / Menu -->
+
+        <!-- Layout container -->
+        <div class="layout-page">
+          <!-- Navbar -->
+
+          <nav
+            class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
+            id="layout-navbar"
+          >
+            <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
+              <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
+                <i class="bx bx-menu bx-sm"></i>
+              </a>
+            </div>
+
+            <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+              <!-- Title -->
+              <div class="navbar-nav align-items-center">
+                <div class="nav-item d-flex align-items-center">
+                  <p class="mb-1 fs-4 lh-0">
+                    <strong> X-ray Image Analysis System for Pneumonia Screening using Image Processing </strong>
+                  </p>
+                </div>
+              </div>
+              <!-- /Title -->
+
+              <ul class="navbar-nav flex-row align-items-center ms-auto">
+                <!-- Icon -->
+                  <div class="avatar">
+                    <img src="../static/img/icons/lungs/lungs.png" />
+                  </div>
+                  </a>
+                <!--/ Icon -->
+              </ul>
+            </div>
+          </nav>
+          <!-- / Navbar -->
+
+          <!-- Content wrapper -->
+          <div class="content-wrapper">
+            <!-- Content -->
+            <div class="container-xxl flex-grow-1 container-p-y">
+              <div class="row">
+                <div class="col-lg-8 mb-4 order-0">
+                  <div class="card">
+                    <div class="d-flex align-items-end row">
+                      <div class="col-sm-7">
+                        <div class="card-body">
+                          <h5 class="card-title text-primary">วินิจฉัยโรคปอดอักเสบ</h5>
+                          <p class="mb-4" style="text-indent: 4rem; text-align: justify;">
+                            เนื่องในสถานการณ์โควิดในปัจจุบันส่งผลให้มีจำนวนผู้ป่วยด้วยโรคปอดอักเสบมากขึ้นอาจทำให้การรักษาไม่ทันท่วงที
+                            เพื่อเป็นการช่วยบุคลากรทางการแพทย์ในการวินิจฉัยเบื้องต้นโดยใช้การประมวลผลภาพ
+                            ทำให้สามารถรักษาผู้ป่วยได้อย่างทันท่วงที
+                          </p>
+
+                          <a href="/analysis" class="btn btn-sm btn-outline-primary">เริ่มต้นวินิจฉัย</a>
+                        </div>
+                      </div>
+                      <div class="col-sm-5 text-center text-sm-left">
+                        <div class="card-body pb-0 px-0 px-md-4">
+                          <img
+                            src="../static/img/illustrations/man-with-laptop-light.png"
+                            height="140"
+                            alt="View Badge User"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 order-1">
+                  <div class="card" style="height: 2rem; width: 100%;">
+                    <div class="card-body">
+                      <div class="card-title d-flex align-items-start justify-content-center">
+                        <p class="fw-semibold d-block" style="margin-top: -1.2rem;">โรคปอดอักเสบ</p>
+                      </div>
+                    </div>
+                  </div>
+
+                    <div class="row">
+                      <div class="col-lg-6 col-md-12 col-6 mb-4">
+                        <div class="card" style="margin-top: 1.5rem; height: 12rem;" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                          <div class="card-body">
+                            <div class="card-title d-flex align-items-start justify-content-center">
+                              <div class="avatar-1 flex-shrink-0">
+                                <img src="../static/img/icons/unicons/question.png" alt="cough" class="rounded" style="height: 120px; width: 160px; margin-top: -3.5rem;" />
+                              </div>
+                            </div>
+                            <span class="fw-semibold d-block mb-1" style="font-size: 1.2rem; margin-top: 6rem; text-align: center;">ความหมาย</span>
+                            <span class="d-block mb-1" style="font-size: 0.9rem; text-align: center;">ดูรายละเอียดเพิ่มเติม</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-6 col-md-12 col-6 mb-4">
+                        <div class="card" style="margin-top: 1.5rem; height: 12rem;" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                          <div class="card-body">
+                            <div class="card-title d-flex align-items-start justify-content-center">
+                              <div class="avatar-1 flex-shrink-0">
+                                <img src="../static/img/icons/unicons/cough.png" alt="cough" class="rounded" style="height: 120px; width: 130px; margin-top: -3.5rem;" />
+                              </div>
+                            </div>
+                            <span class="fw-semibold d-block mb-1" style="font-size: 1.2rem; margin-top: 6rem; text-align: center;">อาการเบื้องต้น</span>
+                            <span class="d-block mb-1" style="font-size: 0.9rem; text-align: center;">ดูรายละเอียดเพิ่มเติม</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Total World -->
+                  <div class="col-12 col-lg-8 order-2 order-md-3 order-lg-2 mb-4">
+                    <div class="card" style="margin-top: -1rem;">
+                      <div class="row g-0">
+                        <div class="col-md-12">
+                          <div class="card card-body">
+                            <img src="../static/img/backgrounds/checking-x-ray.jpg" alt="backgrounds" class="rounded"/>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--/ Total World -->
+                  
+                  <div class="col-12 col-md-8 col-lg-4 order-3 order-md-2">
+                    <div class="row">
+                      <div class="col-6 mb-4">
+                        <div class="card" style="height: 12rem;" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                          <div class="card-body">
+                            <div class="card-title d-flex align-items-start justify-content-center">
+                              <div class="avatar-1 flex-shrink-0">
+                                <img src="../static/img/icons/unicons/protect.png" alt="protect" class="rounded" style="height: 120px; width: 160px; margin-top: -3.5rem;" />
+                              </div>
+                            </div>
+                            <span class="fw-semibold d-block mb-1" style="font-size: 1.2rem; margin-top: 6rem; text-align: center;">การป้องกัน</span>
+                            <span class="d-block mb-1" style="font-size: 0.9rem; text-align: center;">ดูรายละเอียดเพิ่มเติม</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-6 mb-4">
+                        <div class="card" style="height: 12rem;" data-bs-toggle="modal" data-bs-target="#exampleModal3">
+                          <div class="card-body">
+                            <div class="card-title d-flex align-items-start justify-content-center">
+                              <div class="avatar-1 flex-shrink-0">
+                                <img src="../static/img/icons/unicons/sleep.png" alt="sleep" class="rounded" style="height: 120px; width: 160px; margin-top: -3.5rem;" />
+                              </div>
+                            </div>
+                            <span class="fw-semibold d-block mb-1" style="font-size: 1.2rem; margin-top: 6rem; text-align: center;">การรักษา</span>
+                            <span class="d-block mb-1" style="font-size: 0.9rem; text-align: center;">ดูรายละเอียดเพิ่มเติม</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-12 mb-4">
+                        <div class="card" style="height: 2rem; width: 100%; margin-top: 1rem;">
+                          <div class="card-body">
+                            <div class="card-title d-flex align-items-start justify-content-center">
+                              <h6><p class="fw-semibold d-block" style="margin-top: -1rem;">รายงานสถานการณ์ Covid-19 ในประเทศไทย</p></h6>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-12 mb-4">
+                        <div class="card" data-bs-toggle="modal" data-bs-target="#exampleModal4">
+                          <div class="card-body">
+                            <div class="d-flex justify-content-center flex-sm-row flex-column gap-3">
+                              <div class="d-flex flex-sm-column flex-row align-items-start justify-content-center">
+                                <div class="card-title">
+                                  <h5 class="fw-semibold text-nowrap mb-2">จำนวนผู้ป่วย Covid-19</h5>
+                                  <span class="badge bg-label-primary rounded-pill">2022-04-01 TO PRESENT</span>
+                                </div>
+                                <div class="mt-sm-auto">
+                                  <span class="d-block mb-1 mt-1" style="font-size: 0.9rem;">ดูรายละเอียดเพิ่มเติม</span>
+                                </div>
+                              </div>
+                              <img src="../static/img/icons/unicons/news.png" alt="news" width="180" height="auto" style="margin-left: -1.5rem;">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- / Content -->
+
+            <div class="content-backdrop fade"></div>
+          </div>
+          <!-- Content wrapper -->
+        </div>
+        <!-- / Layout page -->
+      </div>
+
+      <!-- Overlay -->
+      <div class="layout-overlay layout-menu-toggle"></div>
+    </div>
+    <!-- / Layout wrapper -->
+
+    <!-- Core JS -->
+    <!-- build:js assets/vendor/js/core.js -->
+    <script src="../static/vendor/js/menu.js"></script>
+    <!-- endbuild -->
+
+    <!-- Main JS -->
+    <script src="../static/vendor/js/main.js"></script>
+  </body>
+
+<!-- รายละเอียดความหมายของโรคปอดอักเสบ -->
+<section>
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered d-flex justify-content-center" style="max-width: auto;">
+      <div class="col-4 modal-content modal-dialog-centered modal-lg justify-content-center">
+        <div class="modal-body">
+          <div class="row justify-content-center mb-2 px-3" >
+            <img src="../static/img/icons/unicons/question.png" alt="question" width="200" height="auto">
+            <p class="text-center" style="font-size: 1.6rem; margin-top: -1.5rem;">ความหมาย</p>
+            <p class="text-left mt-3" style="text-indent: 2rem; font-size: 1.4rem; text-align: justify;">เป็นโรคระบบทางเดินหายใจ ซึ่งมีอาการอักเสบของปอด ส่วนใหญ่เกิดจากการติดเชื้อแบคทีเรียที่ชื่อว่า "นิวโมค็อกคัส" (Pneumococcus) หรือเชื้อไวรัส Covid-19 ซึ่งเป็นสาเหตุหลักที่ทำให้เกิดอาการปอดอักเสบเฉียบพลันและรุนแรง</p>
+          </div>
+        </div>
+        <div class="modal-footer justify-content-center">
+          <a class="btn btn-primary" href="/" role="button">กลับหน้าหลัก</a>
+        </div>
+      </div>
+    </div>
+  </div>
+<section>
+
+<!-- รายละเอียดอาการเบื้องต้น -->
+<section>
+  <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered d-flex justify-content-center" style="max-width: auto;">
+      <div class="col-4 modal-content modal-dialog-centered modal-lg justify-content-center">
+        <div class="modal-body">
+          <div class="row justify-content-center mb-2 px-3" >
+            <img src="../static/img/icons/unicons/cough.png" alt="cough" width="200" height="auto">
+            <p class="text-center" style="font-size: 1.6rem; margin-top: -2.8rem;">อาการเบื้องต้น</p>
+            <p class="text-left mt-3" style="font-size: 1.4rem;">- ไอ</p>
+            <p class="text-left" style="font-size: 1.4rem; margin-top: -1rem;">- มีเสมหะ</p>
+            <p class="text-left" style="font-size: 1.4rem; margin-top: -1rem;">- มีไข้สูง อาจตัวร้อนตลอดเวลา</p>
+            <p class="text-left" style="font-size: 1.4rem; margin-top: -1rem;">- เหนื่อยง่าย</p>
+            <p class="text-left" style="font-size: 1.4rem; margin-top: -1rem;">- หายใจลำบาก หายใจหอบเร็ว</p>
+            <p class="text-left" style="font-size: 1.4rem; margin-top: -1rem;">- เจ็บหน้าอก</p>
+          </div>
+        </div>
+        <div class="modal-footer justify-content-center">
+          <a class="btn btn-primary" href="/" role="button">กลับหน้าหลัก</a>
+        </div>
+      </div>
+    </div>
+  </div>
+<section>
+
+<!-- รายละเอียดการป้องกัน -->
+<section>
+  <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered d-flex justify-content-center" style="max-width: auto;">
+      <div class="col-4 modal-content modal-dialog-centered modal-lg justify-content-center">
+        <div class="modal-body">
+          <div class="row justify-content-center mb-2 px-3" >
+            <img src="../static/img/icons/unicons/protect.png" alt="protect" width="200" height="auto">
+            <p class="text-center" style="font-size: 1.6rem; margin-top: -1.8rem;">การป้องกัน</p>
+            <p class="text-left mt-3" style="font-size: 1.4rem;">- นอนพักผ่อนให้เพียงพอ</p>
+            <p class="text-left" style="font-size: 1.4rem; margin-top: -1rem;">- หลีกเลี่ยงการเข้าไปในพื้นที่แออัด</p>
+            <p class="text-left" style="font-size: 1.4rem; margin-top: -1rem;">- หมั่นล้างมือ</p>
+            <p class="text-left" style="font-size: 1.4rem; margin-top: -1rem;">- รับวัคซีนป้องกัน</p>
+            <p class="text-left" style="font-size: 1.4rem; margin-top: -1rem;">- หากมีไข้สูงเกิน 3 วัน หายใจหอบเหนื่อยควรรีบพบแพทย์ทันที</p>
+          </div>
+        </div>
+        <div class="modal-footer justify-content-center">
+          <a class="btn btn-primary" href="/" role="button">กลับหน้าหลัก</a>
+        </div>
+      </div>
+    </div>
+  </div>
+<section>
+
+<!-- รายละเอียดการรักษา -->
+<section>
+  <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered d-flex justify-content-center" style="max-width: auto;">
+      <div class="col-4 modal-content modal-dialog-centered modal-lg justify-content-center">
+        <div class="modal-body">
+          <div class="row justify-content-center mb-2 px-3" >
+            <img src="../static/img/icons/unicons/sleep.png" alt="sleep" width="200" height="auto">
+            <p class="text-center" style="font-size: 1.6rem; margin-top: -2rem;">การรักษา</p>
+            <p class="text-left mt-3" style="font-size: 1.4rem;">- ดื่มน้ำมากๆ</p>
+            <p class="text-left" style="font-size: 1.4rem; margin-top: -1rem;">- พักผ่อนกินยาตามคำแนะนำของแพทย์</p>
+            <p class="text-left" style="font-size: 1.4rem; margin-top: -1rem;">- ถ้าอาการไม่ดีขึ้นควรปรึกษาแพทย์โดยด่วน</p>
+          </div>
+        </div>
+        <div class="modal-footer justify-content-center">
+          <a class="btn btn-primary" href="/" role="button">กลับหน้าหลัก</a>
+        </div>
+      </div>
+    </div>
+  </div>
+<section>
+
+<!-- จำนวนผู้ป่วยปอดอักเสบ -->
+<section>
+  <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered d-flex justify-content-center" style="max-width: auto;">
+        <div class="modal-body">
+          <div class="row justify-content-center mb-2 px-3" >
+            <button class="text-center btn-dark" style="font-size: 1.6rem; margin-top: 1rem; margin-left: 0.5rem;">รายงานสถานการณ์ Covid-19 ในประเทศไทย</button>
+            <div class='tableauPlaceholder' id='viz1664056469097' style='position: relative'>
+              <noscript>
+                <a href='https:&#47;&#47;ddc.moph.go.th&#47;covid19-dashboard'>
+                  <img alt='1-dash-tiles-w' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;SA&#47;SATCOVIDDashboard&#47;1-dash-tiles-w&#47;1_rss.png' style='border: none' /></a>
+              </noscript>
+              <object class='tableauViz' style='display:none;'>
+                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                <param name='embed_code_version' value='3' />
+                <param name='site_root' value='' />
+                <param name='name' value='SATCOVIDDashboard&#47;1-dash-tiles-w' />
+                <param name='tabs' value='no' />
+                <param name='toolbar' value='no' />
+                <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;SA&#47;SATCOVIDDashboard&#47;1-dash-tiles-w&#47;1.png' />
+                <param name='animate_transition' value='yes' />
+                <param name='display_static_image' value='yes' />
+                <param name='display_spinner' value='yes' />
+                <param name='display_overlay' value='yes' />
+                <param name='display_count' value='yes' />
+              </object>
+            </div>                
+            <script type='text/javascript'>                  
+            var divElement = document.getElementById('viz1664056469097');                    
+            var vizElement = divElement.getElementsByTagName('object')[0];                    
+            vizElement.style.width='1200px';
+            vizElement.style.height='1000px';                    
+            var scriptElement = document.createElement('script');                    
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+            </script>
+          </div>
+        </div>
+    </div>
+  </div>
+<section>
+</html>
